@@ -31,8 +31,15 @@ public class Xpath04 {
         WebElement city=driver.findElement(By.xpath("//input[@id='yourCity']"));
         city.sendKeys("Boston");
 
-        WebElement ProfesionalEmail=driver.findElement(By.xpath("(//input[@class='form-control backup' ])[3]"));
-        ProfesionalEmail.sendKeys("");
+        WebElement personalMail=driver.findElement(By.xpath("//input[@name='PrivateEmail' ]"));
+        personalMail.sendKeys("Personal@mail.com");
+
+
+        WebElement Officeemail= driver.findElement(By.xpath("//input[@name='OfficeEmail' ]"));
+       Officeemail.sendKeys("@mankoxa.com");
+
+        WebElement ProfesionalEmail=driver.findElement(By.xpath("//input[@name='ProfessionalEmail']"));
+        ProfesionalEmail.sendKeys("stegaru@email.com");
 
         WebElement name= driver.findElement(By.xpath("//input[@id='clientName' and @class='form-control']"));
         name.sendKeys("Gregory");
