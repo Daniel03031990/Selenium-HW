@@ -14,11 +14,16 @@ public class Iframe {
         driver.get("https://syntaxprojects.com/handle-iframe-homework.php");
 
 
+        //1. Select Age Checkbox:
+        //   - Select the **Age** checkbox.
         driver.switchTo().frame(1);
         driver.switchTo().frame(0);
 
        WebElement age =driver.findElement(By.xpath("//input[@type='checkbox']"));
        age.click();
+
+        //2. **Select City**:
+        //   - Select any city from the dropdown.
 
        driver.switchTo().parentFrame();
 
@@ -26,11 +31,15 @@ public class Iframe {
         Select sel=new Select(city);
         sel.selectByIndex(1);
 
+
         driver.switchTo().defaultContent();
         driver.switchTo().frame(0);
 
         WebElement userName=driver.findElement(By.xpath("//input[@name='Username']"));
         userName.sendKeys("Steven Jobs");
+
+        //3. **Enter Username**:
+        //   -enter your username in the **Username** field.
 
 
 

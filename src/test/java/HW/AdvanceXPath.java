@@ -10,10 +10,23 @@ public class AdvanceXPath {
         WebDriver driver=new ChromeDriver();
         driver.get("https://www.syntaxprojects.com/advanceXpath-homework.php");
         driver.manage().window().maximize();
+
+        //1.The user should enter the names of books in reverse order from least favorite to favorite
+        // using advanced Xpath (such as `parent`, `following-sibling`, or `preceding-sibling`).
+        //2. The user should enter the name of their favorite book using advanced Xpath.
+        //3. The user should enter the names of grandparent, parent, and child fields using advanced Xpath.
+        //4. The form should submit successfully only if all fields are filled out correctly using the
+        // appropriate advanced Xpath expressions.(to be removed)
+
+
         WebElement leastFavorite =driver.findElement(By.xpath("//input[@id='least-favorite']/preceding-sibling::input[2]"));
         leastFavorite.sendKeys("Harry Potter");
+
+
         WebElement mediumFavorite=driver.findElement(By.xpath("//input[@class='form-control']/following-sibling::input[1]"));
         mediumFavorite.sendKeys("Lord of the Rings");
+
+
         WebElement mostFavorite=driver.findElement(By.xpath("//div[@class='row col-4-fields']/child::input[3]"));
         mostFavorite.sendKeys("World and Peace");
 
