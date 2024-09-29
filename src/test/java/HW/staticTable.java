@@ -18,20 +18,21 @@ public class staticTable {
         //   - Print all the rows matching criteria
 
 
-        int count=1;
-       List<WebElement> allCountries=driver.findElements(By.xpath("//table[@id='task-table']/tbody/tr/td[3]"));
-       for (WebElement country:allCountries){
-           String Usacountry=country.getText();
-           if (Usacountry.equals("USA")){
-               System.out.println(count);
+       int count=1;
+
+        List<WebElement> allcountries = driver.findElements(By.xpath("//table[@id='task-table']/tbody/tr/td[3]"));
+        for (WebElement country:allcountries){
+            String strCountry=country.getText();
+            if (strCountry.equals("USA")){
+                System.out.println(count);
 
 
 
-              WebElement results= driver.findElement(By.xpath("//table[@id='task-table']/tbody/tr["+count+"]"));
-               System.out.println(results.getText());
-           }
-           count++;
-       }
+               WebElement result=driver.findElement(By.xpath("//table[@id='task-table']/tbody/tr["+count+"]"));
+                System.out.println(result.getText());
+            }
+            count++;
+        }
 
 
 
