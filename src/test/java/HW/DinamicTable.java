@@ -26,8 +26,9 @@ public class DinamicTable {
        List<WebElement> Ids=driver.findElements(By.xpath("//table/tbody/tr/td[2]"));
         boolean notFound=true;
         while (notFound){
-            int count=1;
 
+
+            int count=1;
        for (WebElement id:Ids){
            String strID=id.getText();
            if (strID.equals("111005A")){
